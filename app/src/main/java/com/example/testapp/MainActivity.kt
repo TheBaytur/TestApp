@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        minimumInput = findViewById(R.id.minEditText)
+
+
 
     }
 }
