@@ -12,13 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     private lateinit var minimumInput: EditText
-
     private lateinit var maximumInput: EditText
-
     private lateinit var resultText: TextView
-
     private lateinit var button: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +27,10 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.button)
 
         button.setOnClickListener {
-            resultText.text = "It works!"
+            val miniumResult = Integer.parseInt(minimumInput.text.toString())
+            val maxiumResult = Integer.parseInt(maximumInput.text.toString())
+            val result = miniumResult + maxiumResult
+            resultText.text = result.toString()
 
         }
 
