@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.button)
 
         button.setOnClickListener {
-            val miniumResult = Integer.parseInt(minimumInput.text.toString())
-            val maxiumResult = Integer.parseInt(maximumInput.text.toString())
-            val result = miniumResult + maxiumResult
+            val minimumResult = Integer.parseInt(minimumInput.text.toString())
+            val maximumResult = Integer.parseInt(maximumInput.text.toString())
+            val result = (minimumResult..maximumResult).random()
             resultText.text = result.toString()
 
         }
